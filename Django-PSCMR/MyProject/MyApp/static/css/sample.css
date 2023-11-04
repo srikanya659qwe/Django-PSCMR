@@ -1,0 +1,29 @@
+h2{
+	text-align: center;
+	color:green;
+	font-size: 30px;
+	font-style: italic;
+}
+form{
+	background-color: lightseagreen;
+	margin-left: 30%;
+	margin-right: 30%;
+	padding:40px;
+	border-radius: 30px;
+}
+button{
+	color:red;
+	background-color:lime;
+	width:20%;
+	padding:5px;
+	border-radius: 10px;
+}
+input[type=text],input[type=number],input[type=email],
+input[type=password]
+{
+	background: lightsalmon;
+	width: 50%;
+	padding:10px;
+	border-radius: 20px;
+	text-align: center;
+}

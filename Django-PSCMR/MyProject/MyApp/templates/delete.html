@@ -1,0 +1,28 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>delete page</title>
+
+
+	<link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css' %}">
+
+	<script type="text/javascript" src="{% static 'js/bootstrap.js' %}"></script>
+</head>
+<body>
+	<form method="POST">
+		{% csrf_token %}
+		<div class="container mt-5 bg-warning">
+			<h2 class="alert alert-text text-center bg-info">Are you sure to delete the {{info.name}} record</h2>
+		</div>
+
+		<div class="text-center">
+			<input type="submit" value="Delete" class="btn btn-danger">
+
+			<a href="{% url 'read' %}" class="btn btn-success">Cancel</a>
+		</div>
+	</form>
+</body>
+</html>

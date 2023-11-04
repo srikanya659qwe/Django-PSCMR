@@ -1,0 +1,36 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>registration page</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/sample.css' %}">
+
+	<style type="text/css">
+		body{
+			background-image: url("{% static 'images/sample.jpg' %}");
+			background-repeat: no-repeat;
+			background-size: cover;
+		}
+	</style>
+</head>
+<body>
+	<h2>Registration Form</h2>
+	<form method="POST">
+		{% csrf_token %}
+		<input type="text" name="uname" placeholder="enter your username"><br><br>
+
+		<input type="number" name="rnm" placeholder="Enter your Rollnumber"><br><br>
+
+		<input type="number" name="mbl" placeholder="Enter your Mobile Number"><br><br>
+
+		<input type="email" name="em" placeholder="Enter your Email Address"><br><br>
+
+		<input type="password" name="psw" placeholder="Enter your password"><br><br>
+
+		<input type="password" name="cpsw" placeholder="Enter your Confirm Password"><br><br>
+
+		<button>Register</button>
+	</form>
+	<img src="{% static 'images/logo2.jpg' %}">
+</body>
+</html>

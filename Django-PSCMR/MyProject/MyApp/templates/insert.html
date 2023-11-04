@@ -1,0 +1,49 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Student Data Registration page</title>
+
+	<link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css' %}">
+
+	<script type="text/javascript" src="{% static 'js/bootstrap.js' %}"></script>
+</head>
+<body>
+	<div class="container mt-5 bg-warning col-md-5">
+		<h2 class="alert alert-text text-center bg-info">Student Data Registration Form</h2>
+
+		<form method="POST">
+			{% csrf_token %}
+			<div>
+				<input type="text" name="uname" placeholder="Enter your Username" class="form-control my-4">
+			</div>
+
+			<div>
+				<input type="text" name="rnm" placeholder="Enter your Rollnumber" class="form-control my-4">
+			</div>
+
+			<div>
+				<input type="number" name="age" placeholder="Enter your Age" class="form-control my-4">
+			</div>
+
+			<div>
+				<input type="number" name="mbl" placeholder="Enter your Mobile Number" class="form-control my-4">
+			</div>
+
+			<div>
+				<input type="email" name="em" placeholder="Enter your Email Address" class="form-control my-4">
+			</div>
+
+			<div>
+				<input type="text" name="addr" placeholder="Enter your Address" class="form-control my-4">
+			</div>
+
+			<div class="text-center">
+				<button class="btn btn-success">Register</button>
+			</div>
+		</form>
+	</div>
+</body>
+</html>
